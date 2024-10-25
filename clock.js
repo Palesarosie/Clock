@@ -20,10 +20,11 @@ function updateTime() {
     let parisTime = moment().tz("Europe/Paris");
 
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-    parisTimeElement.innerHTML = parisTime.format("[<small>]A[</small>]");
+    parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
   }
 }
-
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
